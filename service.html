@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ind">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aturae - Services</title>
+    <link rel="icon" href="logo_nture-removebg-preview.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4c945c;
+            color: #333;
+        }
+
+        header {
+            background-image: url('https://i.pinimg.com/564x/7e/7e/b0/7e7eb01b0623e19142defea011fd18b0.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: rgb(19, 19, 19);
+            text-align: center;
+            padding: 50px 0;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: rgb(0, 32, 2);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #fff;
+            background-color: #3d6d4b;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .motto {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: white;
+        }
+        .section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Slideshow */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Product Categories */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .category {
+            text-align: center;
+            width: 180px;
+            padding: 20px;
+            background-color: #bdeebb;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .category:hover {
+            background-color: #ddd;
+        }
+
+        .category img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .category-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .close {
+            color: red;
+            font-size: 18px;
+            float: right;
+            cursor: pointer;
+        }
+
+        .modal-description {
+            margin: 20px 0;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 1px solid #4c945c;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 148, 92, 0.5);
+        }
+
+        .contact-form button {
+            background-color: #4c945c;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #3d6d4b;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #4c945c;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logo_nture-removebg-preview.png" alt="Naturae Logo" class="logo">
+            <h1>aturae - Personal Care for Everyone</h1>
+        </div>
+        <nav>
+            <a href="home.html" >Home</a>
+            <a href="service.html">Services</a>
+            <a href="abtus.html" >About Us</a>
+            <a href="contact.html" >Contact</a>
+        </nav>
+    </header>
+
+<div class="motto">
+    <h2>At (N)aturae, Every Treatment Is a Celebration of Self</h2> 
+</div>
+
+<!-- Slideshow Section -->
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="https://img.freepik.com/free-psd/nature-cosmetics-landing-page-template_23-2151059498.jpg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <img src="https://stg-uploads.slidenest.com/template_857/templateColor_891/previewImages/mental-health-at-work-research-powerpoint-google-slides-keynote-presentation-template-9.jpeg" style="width:100%">
+    </div>
+    <div class="mySlides">
+        <img src="https://st4.depositphotos.com/10665628/25393/v/450/depositphotos_253931054-stock-illustration-disabled-peolple-active-life-banner.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- Categories Section -->
+<div class="section">
+    <h2>Our Services :</h2> 
+    <p>
+        At Naturae, we provide personalized care for everyone, including individuals with disabilities. Our services range from body care, hair care, mental care, physical care, to skincare, using natural products for your well-being. Whether in our clinic or through home visits, we are here to deliver exceptional care tailored to your needs.
+    </p>
+    <div class="categories">
+        <div class="category" onclick="openModal('Body Care', 'We offer body care services that include massages, body skin treatments, and relaxation therapy to reduce stress and enhance physical well-being. These services are tailored to meet the physical needs of each individual, including those who may need mobility assistance. Using natural products and expert touch, we make body care a soothing and refreshing experience.')">
+            <img src="https://img.freepik.com/premium-vector/pure-cosmetics-cream-serum-lotion-white-background-top-view-herbal-ingredients_1035899-9967.jpg" alt="Body Care">
+            <div class="category-title">Body Care</div>
+        </div>
+        <div class="category" onclick="openModal('Hair Care', 'Our hair care services are specifically designed for everyone, including individuals with special needs. Our team provides safe and comfortable at-home hair care solutions, using natural products that nourish the scalp and hair. Whether you need a haircut, hair loss treatment, or healthy hair therapy, we are here to take care of your hair with care and gentleness.')">
+            <img src="https://image.popmama.com/content-images/post/20220815/urutan-hair-care-8png-c403babdea2878d820bca09d69dadf18.png" alt="Hair Care">
+            <div class="category-title">Hair Care</div>
+        </div>
+        <div class="category" onclick="openModal('Mental Care', 'Mental health is essential for overall well-being. At (N)aturae, we offer mental therapy services, counseling, and relaxation techniques to help reduce anxiety, stress, and mental strain. We believe that mental health care should be accessible to everyone, including individuals with disabilities, which is why our services can be enjoyed at home with full support from experienced therapists.')">
+            <img src="https://i.pinimg.com/564x/e9/37/4f/e9374f833b3512103cee210f1575f39a.jpg" alt="Mental care">
+            <div class="category-title">Mental Care</div>
+        </div>
+        <div class="category" onclick="openModal('Skin Care', '(N)aturae’s skin care services emphasize eco-friendly products suitable for all skin types, including sensitive skin. We provide facials, exfoliation, and hydration treatments, all performed in the comfort of your home. These services are ideal for individuals with special needs, as we offer personalized and inclusive care, ensuring everyone feels comfortable and well taken care of.')">
+            <img src="https://st4.depositphotos.com/1868027/38217/i/450/depositphotos_382174748-stock-photo-natural-cosmetics-green-leaves-white.jpg" alt="Skin Care">
+            <div class="category-title">Skin Care</div>
+        </div>
+        <div class="category" onclick="openModal('Physical Care', 'To maintain physical health, we offer personalized fitness programs and physical therapy tailored to the needs of each individual. From gentle movement therapy to fitness exercises, we work with health professionals to create disability-friendly programs, ensuring everyone can improve their physical health in a way that suits their conditions..')">
+            <img src="https://i.pinimg.com/564x/5b/3c/f7/5b3cf7240f32e1158b2541c3f117371e.jpg" alt="Physical care">
+            <div class="category-title">Physical Care</div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+<div id="serviceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+    </div>
+</div>
+
+<script>
+    // Function to open the modal with the appropriate content
+    function openModal(title, description) {
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-description').innerText = description;
+        document.getElementById('serviceModal').style.display = 'flex';
+    }
+
+    // Function to close the modal
+    function closeModal() {
+        document.getElementById('serviceModal').style.display = 'none';
+    }
+
+    // Close modal when clicking outside the content
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('serviceModal')) {
+            closeModal();
+        }
+    }
+</script>
+
+<!-- Contact Section -->
+<div id="contact" class="section fade-in">
+    <h2>Contact Us</h2>
+    <form class="contact-form" action="submit_form.php" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<footer style="text-align: center; padding: 20px;">
+    <p>&copy; 2024 (N)aturae. All Rights Reserved.</p>
+    <div>
+        <a href="#" style="color: #fcfcfc; margin: 0 10px;">Facebook</a>
+        <a href="#" style="color: #fafcfa; margin: 0 10px;">Instagram</a>
+    </div>
+</footer>
+
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</body>
+</html>

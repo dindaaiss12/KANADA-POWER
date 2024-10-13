@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ind">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aturae - Personal Care Services</title>
+    <link rel="icon" href="logo_nture-removebg-preview.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #4c945c;
+            color: #333;
+        }
+
+        header {
+            background-image: url('https://i.pinimg.com/564x/7e/7e/b0/7e7eb01b0623e19142defea011fd18b0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #0c0c0c;
+            text-align: center;
+            padding: 50px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: rgb(0, 32, 2);
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            color: #fff;
+            background-color: #3d6d4b;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .motto {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+
+        .motto:hover {
+            color: #36794a;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .services {
+            display: none;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 1px solid #4c945c;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 148, 92, 0.5);
+        }
+
+        .contact-form button {
+            background-color: #4c945c;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #3d6d4b;
+            transform: scale(1.05);
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 5px;
+        }
+
+        .team-member {
+            position: relative;
+            margin: 5px;
+            text-align: center;
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: scale(1.1);
+        }
+
+        .team-image {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover .team-image {
+            transform: rotate(5deg);
+        }
+
+        .member-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(85, 121, 93, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .team-member:hover .member-info {
+            opacity: 1;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo_nture-removebg-preview.png" alt="Naturae Logo" class="logo">
+            <h1>aturae - Personal Care for Everyone</h1>
+        </div>
+        <nav>
+            <a href="home.html" >Home</a>
+            <a href="service.html">Services</a>
+            <a href="abtus.html" >About Us</a>
+            <a href="contact.html" >Contact</a>
+        </nav>
+    </header>
+
+<div class="motto">
+    <h2>At (N)aturae, Every Treatment Is a Celebration of Self</h2>
+</div>
+
+<!-- Home Section -->
+<div id="home" class="section fade-in">
+    <h2>The History Of (N)aturae</h2>
+    <p>
+        Naturae was founded on the belief that self-care is a right for everyone, without exception. Established in 2024, Naturae was born with a simple yet powerful mission: to provide inclusive, sustainable personal care services based on natural ingredients. We recognize that self-care is not just about the physical, but also about mental and emotional well-being. From hair care to body care, mental health to physical health, we design each service to support your holistic well-being.
+    </p>
+    <p>
+        Initially, we were inspired by the need for care services that are friendly to everyone, including those with disabilities. We understand that access to beauty and health services is often limited for many people. Therefore, Naturae emerged as a solution, offering services that can be accessed by everyone, whether at our clinic or in the comfort of your home. Our team is trained to provide compassionate and attentive care, especially for those who require extra comfort at home.
+    </p>
+    <p>
+        In addition to our services, we also offer a range of personal care products formulated from natural, safe, and sustainable ingredients. Each of our products is carefully designed, prioritizing quality and harmony with nature.
+    </p>
+    <p>
+        Since its inception, Naturae has continued to innovate in delivering the best services and products, staying true to the principles of inclusivity and the use of natural ingredients. We are proud to be part of your journey towards health and happiness, wherever you may be.
+</div>
+
+<!-- About Us Section -->
+<div id="about" class="section fade-in">
+    <h2>About Us</h2>
+    <p>
+        At Naturae, we believe in accessible, personalized self-care for everyone, including individuals with disabilities. We offer a range of services, from body care, hair care, mental care, physical therapy, to skincare, all using natural, high-quality products. Our team is dedicated to providing inclusive, professional care, and we also offer home visits for your convenience. Let us bring the experience of holistic wellness to you—helping you look and feel your best.
+    </p>
+    <div class="team">
+        <div class="team-member">
+            <img src="C:\Users\pitub\Documents\VSCODE\m1.jpg" alt="Team Member 1" class="team-image">
+            <div class="member-info">
+                <h4>Chatrina Early Aprillia</h4>
+                <p>Expert in Skin Care and Holistic Wellness</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="C:\Users\pitub\Documents\VSCODE\member2.jpg" alt="Team Member 2" class="team-image">
+            <div class="member-info">
+                <h4>Devika Sari Puput</h4>
+                <p>Specialist in Mental Health Care and Counseling</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="C:\Users\pitub\Documents\VSCODE\member3.jpg" alt="Team Member 3" class="team-image">
+            <div class="member-info">
+                <h4>Dinda Aisyah Ariani</h4>
+                <p>Experienced in Body Care and Nutrition</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div id="contact" class="section fade-in">
+    <h2>Contact Us</h2>
+    <form class="contact-form" action="submit_form.php" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<footer style="text-align: center; padding: 20px;">
+    <p>&copy; 2024 (N)aturae. All Rights Reserved.</p>
+    <div>
+        <a href="#" style="color: #f2f8f2; margin: 0 10px;">Facebook</a>
+        <a href="#" style="color: #f5f8f6; margin: 0 10px;">Instagram</a>
+    </div>
+</footer>
+
+</body>
+</html>
